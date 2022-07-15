@@ -19,15 +19,8 @@
  * SOFTWARE.
  */
 
-#include "cyw43.h"
+#include "cyw43arch.h"
 
-#include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
+void km_cyw43arch_init() {}
 
-void km_cyw43_init() {
-  cyw43_arch_init();
-}
-
-void km_cyw43_gpio_put(uint8_t pin, uint8_t value) {
-  cyw43_arch_gpio_put(pin, value);
-}
+void km_cyw43arch_gpio_put(uint8_t pin, uint8_t value) {}

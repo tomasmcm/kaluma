@@ -19,17 +19,17 @@
  * SOFTWARE.
  */
 
-#ifndef __KM_CYW43_H
-#define __KM_CYW43_H
+#ifndef __KM_CYW43ARCH_H
+#define __KM_CYW43ARCH_H
 
 #include <stdbool.h>
 #include <stdint.h>
 
-#define KM_CYW43_WL_GPIO_LED_PIN 0
-#define MSTR_CYW43_WL_GPIO_LED_PIN "CYW43_WL_GPIO_LED_PIN"
+#define KM_CYW43ARCH_WL_GPIO_LED_PIN 0
+#define MSTR_CYW43ARCH_WL_GPIO_LED_PIN "CYW43ARCH_WL_GPIO_LED_PIN"
 
-void km_cyw43_init();
+void km_cyw43arch_init();
 
-void km_cyw43_gpio_put(uint8_t pin, uint8_t value);
+void km_cyw43arch_gpio_put(uint8_t pin, uint8_t value);
 
-#endif /* __KM_CYW43_H */
+#endif /* __KM_CYW43ARCH_H */

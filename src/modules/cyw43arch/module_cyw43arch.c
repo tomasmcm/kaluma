@@ -19,6 +19,39 @@
  * SOFTWARE.
  */
 
-#include "jerryscript.h"
+#include "module_cyw43arch.h"
 
-jerry_value_t module_cyw43_init();
+#include <stdlib.h>
+
+#include "jerryscript.h"
+#include "jerryxx.h"
+#include "cyw43arch.h"
+#include "cyw43arch_magic_strings.h"
+
+/**
+ * cyw43arch.gpioPut(t)
+ * args:
+ *   pin: {number}
+ *   value: {number}
+ */
+JERRYXX_FUN(cyw43arch_gpio_put_fn) {
+  // check and get args
+  JERRYXX_CHECK_ARG_NUMBER(0, "pin")
+  JERRYXX_CHECK_ARG_NUMBER(1, "value")
+  double pin = JERRYXX_GET_ARG_NUMBER(0);
+  double value = JERRYXX_GET_ARG_NUMBER(1);
+  km_cyw43arch_gpio_put((uint8_t)pin, (uint8_t)value);
+  return jerry_create_undefined();
+}
+
+/**
+ * Initialize 'cyw43arch' module
+ */
+jerry_value_t module_cyw43arch_init() {
+  /* cyw43arch module exports */
+  jerry_value_t exports = jerry_create_object();
+  jerryxx_set_property_function(exports, MSTR_CYW43ARCH_GPIO_PUT, cyw43arch_gpio_put_fn);
+  jerry_value_t global = jerry_get_global_object();
+  jerryxx_set_property_number(global, MSTR_CYW43ARCH_WL_GPIO_LED_PIN, KM_CYW43ARCH_WL_GPIO_LED_PIN);
+  return exports;
+}

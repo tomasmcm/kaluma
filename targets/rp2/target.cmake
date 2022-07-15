@@ -34,7 +34,7 @@ if(NOT MODULES)
     http
     url
     rp2
-    cyw43
+    cyw43arch
     rtc
     path
     flash
@@ -44,6 +44,8 @@ if(NOT MODULES)
     sdcard
     startup)
 endif()
+
+set(PICO_CYW43_SUPPORTED "1")
 
 set(PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/lib/pico-sdk)
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
