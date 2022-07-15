@@ -63,7 +63,7 @@ set(SOURCES
   ${SOURCES}
   ${TARGET_SRC_DIR}/adc.c
   ${TARGET_SRC_DIR}/system.c
-  ${TARGET_SRC_DIR}/cyw43.c
+  ${TARGET_SRC_DIR}/cyw43arch.c
   ${TARGET_SRC_DIR}/gpio.c
   ${TARGET_SRC_DIR}/pwm.c
   ${TARGET_SRC_DIR}/tty.c
