@@ -96,7 +96,6 @@ set(CMAKE_OBJCOPY ${PREFIX}objcopy)
 
 set(TARGET_LIBS c nosys m
   pico_stdlib
-  cyw43_driver
   pico_cyw43_arch_none
   hardware_adc
   hardware_pwm
