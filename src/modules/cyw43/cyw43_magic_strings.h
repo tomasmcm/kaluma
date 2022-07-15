@@ -19,15 +19,10 @@
  * SOFTWARE.
  */
 
-#include "cyw43_arch.h"
+#ifndef __CYW43_MAGIC_STRINGS_H
+#define __CYW43_MAGIC_STRINGS_H
 
-#include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
+#define MSTR_CYW43_CYW43 "CYW43"
+#define MSTR_CYW43_GPIO_PUT "gpioPut"
 
-void km_cyw43_arch_init() {
-  cyw43_arch_init();
-}
-
-void km_cyw43_arch_gpio_put(uint8_t pin, uint8_t value) {
-  cyw43_arch_gpio_put(pin, value);
-}
+#endif /* __CYW43_MAGIC_STRINGS_H */

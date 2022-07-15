@@ -34,7 +34,7 @@ if(NOT MODULES)
     http
     url
     rp2
-    cyw43_arch
+    cyw43
     rtc
     path
     flash
@@ -61,7 +61,7 @@ set(SOURCES
   ${SOURCES}
   ${TARGET_SRC_DIR}/adc.c
   ${TARGET_SRC_DIR}/system.c
-  ${TARGET_SRC_DIR}/cyw43_arch.c
+  ${TARGET_SRC_DIR}/cyw43.c
   ${TARGET_SRC_DIR}/gpio.c
   ${TARGET_SRC_DIR}/pwm.c
   ${TARGET_SRC_DIR}/tty.c

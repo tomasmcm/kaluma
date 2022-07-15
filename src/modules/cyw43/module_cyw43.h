@@ -19,10 +19,6 @@
  * SOFTWARE.
  */
 
-#ifndef __CYW43_ARCH_MAGIC_STRINGS_H
-#define __CYW43_ARCH_MAGIC_STRINGS_H
+#include "jerryscript.h"
 
-#define MSTR_CYW43_ARCH_CYW43ARCH "Cyw43Arch"
-#define MSTR_CYW43_ARCH_GPIO_PUT "gpioPut"
-
-#endif /* __CYW43_ARCH_MAGIC_STRINGS_H */
+jerry_value_t module_cyw43_init();
