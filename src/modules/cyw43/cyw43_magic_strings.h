@@ -22,7 +22,7 @@
 #ifndef __CYW43_MAGIC_STRINGS_H
 #define __CYW43_MAGIC_STRINGS_H
 
-#define MSTR_CYW43_CYW43 "CYW43"
+#define MSTR_CYW43_CYW43 "cyw43"
 #define MSTR_CYW43_GPIO_PUT "gpioPut"
 
 #endif /* __CYW43_MAGIC_STRINGS_H */
