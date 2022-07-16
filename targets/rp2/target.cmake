@@ -73,10 +73,16 @@ if(PICO_CYW43_SUPPORTED)
   set(EXTRA_SOURCES ${TARGET_SRC_DIR}/cyw43_arch.c)
 endif()
 
+if(PICO_CYW43_SUPPORTED)
+  set(SYSTEM_SOURCE ${TARGET_SRC_DIR}/system_pico_w.c)
+else()
+  set(SYSTEM_SOURCE ${TARGET_SRC_DIR}/system.c)
+endif()
+
 set(SOURCES
   ${SOURCES}
   ${TARGET_SRC_DIR}/adc.c
-  ${TARGET_SRC_DIR}/system.c
+  ${SYSTEM_SOURCE}
   ${EXTRA_SOURCES}
   ${TARGET_SRC_DIR}/gpio.c
   ${TARGET_SRC_DIR}/pwm.c
