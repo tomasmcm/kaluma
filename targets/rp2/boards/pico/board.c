@@ -25,3 +25,8 @@
  * Initialize board
  */
 void board_init() {}
+
+/**
+ * Initialize board specific modules
+ */
+void board_modules_init() {}

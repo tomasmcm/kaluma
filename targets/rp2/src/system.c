@@ -33,14 +33,12 @@
 #include "i2c.h"
 #include "io.h"
 #include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
 #include "pwm.h"
 #include "rtc.h"
 #include "spi.h"
 #include "tty.h"
 #include "tusb.h"
 #include "uart.h"
-#include "cyw43_arch.h"
 
 /**
  * Delay in milliseconds
@@ -82,7 +80,7 @@ void km_system_init() {
   km_uart_init();
   km_rtc_init();
   km_flash_init();
-  km_cyw43_arch_init();
+  board_modules_init();
 }
 
 void km_system_cleanup() {

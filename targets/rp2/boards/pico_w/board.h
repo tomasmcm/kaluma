@@ -92,4 +92,6 @@
 
 void board_init();
 
+void board_modules_init();
+
 #endif /* __RP2_PICO_W_H */
