@@ -20,17 +20,8 @@
  */
 
 #include "board.h"
-#include "cyw43_arch.h"
 
 /**
  * Initialize board
  */
 void board_init() {}
-
-/**
- * Initialize board specific modules
- */
-void board_modules_init() {
-  printf("board_modules_init");
-  km_cyw43_arch_init();
-}

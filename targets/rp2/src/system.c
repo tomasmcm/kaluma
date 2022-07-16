@@ -71,7 +71,6 @@ void km_micro_delay(uint32_t usec) { sleep_us(usec); }
  * Kaluma Hardware System Initializations
  */
 void km_system_init() {
-  printf("km_system_init");
   stdio_init_all();
   km_gpio_init();
   km_adc_init();
@@ -81,7 +80,6 @@ void km_system_init() {
   km_uart_init();
   km_rtc_init();
   km_flash_init();
-  board_modules_init();
 }
 
 void km_system_cleanup() {

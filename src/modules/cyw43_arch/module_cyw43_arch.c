@@ -48,6 +48,8 @@ JERRYXX_FUN(cyw43_arch_gpio_put_fn) {
  * Initialize 'cyw43_arch' module
  */
 jerry_value_t module_cyw43_arch_init() {
+  km_cyw43_arch_init();
+
   /* cyw43_arch module exports */
   jerry_value_t exports = jerry_create_object();
   jerryxx_set_property_function(exports, MSTR_CYW43_ARCH_GPIO_PUT, cyw43_arch_gpio_put_fn);
