@@ -22,12 +22,10 @@
 #include "cyw43_arch.h"
 
 #include "board.h"
-#include "repl.h"
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 
 void km_cyw43_arch_init() {
-  km_repl_printf("km_cyw43_arch_init");
   cyw43_arch_init();
 }
 
