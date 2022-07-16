@@ -26,6 +26,7 @@
 #include "pico/cyw43_arch.h"
 
 void km_cyw43_arch_init() {
+  printf("km_cyw43_arch_init");
   cyw43_arch_init();
 }
 
