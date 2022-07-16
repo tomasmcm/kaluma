@@ -32,7 +32,8 @@
  * cyw43_arch.init()
  */
 JERRYXX_FUN(cyw43_arch_init_fn) {
-  return km_cyw43_arch_init();
+  km_cyw43_arch_init();
+  return jerry_create_undefined();
 }
 
 /**
