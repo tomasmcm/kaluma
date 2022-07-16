@@ -13,6 +13,10 @@ if(NOT BOARD)
   set(BOARD "pico")
 endif()
 
+if(BOARD STREQUAL "pico_w")
+  set(PICO_CYW43_SUPPORTED 1)
+endif()
+
 if(PICO_CYW43_SUPPORTED)
   set(EXTRA_MODULES cyw43_arch)
 endif()
