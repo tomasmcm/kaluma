@@ -22,6 +22,7 @@
 #include "cyw43_arch.h"
 
 #include "board.h"
+#include "tty.h"
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 

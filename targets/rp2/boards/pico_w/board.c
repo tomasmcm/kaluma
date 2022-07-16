@@ -20,6 +20,7 @@
  */
 
 #include "board.h"
+#include "tty.h"
 #include "cyw43_arch.h"
 
 /**
