@@ -21,6 +21,8 @@ if(PICO_CYW43_SUPPORTED)
   set(EXTRA_MODULES cyw43_arch)
 endif()
 
+message(STATUS "setting modules")
+
 # default modules
 if(NOT MODULES)
   set(MODULES 
@@ -52,6 +54,8 @@ if(NOT MODULES)
     sdcard
     startup)
 endif()
+
+message(STATUS MODULES)
 
 set(PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/lib/pico-sdk)
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
