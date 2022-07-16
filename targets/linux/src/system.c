@@ -32,7 +32,7 @@
 #include "spi.h"
 #include "tty.h"
 #include "uart.h"
-#include "cyw43arch.h"
+#include "cyw43_arch.h"
 
 const char km_system_arch[] = "i686";
 const char km_system_platform[] = "linux";
@@ -84,7 +84,7 @@ void km_system_init() {
   km_uart_init();
   km_rtc_init();
   km_flash_init();
-  km_cyw43arch_init();
+  km_cyw43_arch_init();
 }
 
 void km_system_cleanup() {

@@ -19,6 +19,8 @@
  * SOFTWARE.
  */
 
-#include "jerryscript.h"
+#include "cyw43_arch.h"
 
-jerry_value_t module_cyw43arch_init();
+void km_cyw43_arch_init() {}
+
+void km_cyw43_arch_gpio_put(uint8_t pin, uint8_t value) {}

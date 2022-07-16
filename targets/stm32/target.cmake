@@ -80,7 +80,7 @@ else()
   set(TARGET_LDSCRIPT ${TARGET_SRC_DIR}/STM32F411CETx_FLASH.ld)
 endif()
 
-set(KALUMA_MODULES events gpio led button pwm adc i2c spi uart graphics at storage stream http url startup cyw43arch)
+set(KALUMA_MODULES events gpio led button pwm adc i2c spi uart graphics at storage stream http url startup cyw43_arch)
 
 set(CMAKE_SYSTEM_PROCESSOR cortex-m4)
 set(CMAKE_C_FLAGS "-mcpu=cortex-m4 -mlittle-endian -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard ${OPT} -Wall -fdata-sections -ffunction-sections")

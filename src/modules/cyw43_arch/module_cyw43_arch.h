@@ -19,15 +19,6 @@
  * SOFTWARE.
  */
 
-#include "cyw43arch.h"
+#include "jerryscript.h"
 
-#include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
-
-void km_cyw43arch_init() {
-  cyw43_arch_init();
-}
-
-void km_cyw43arch_gpio_put(uint8_t pin, uint8_t value) {
-  cyw43_arch_gpio_put(pin, value);
-}
+jerry_value_t module_cyw43_arch_init();
