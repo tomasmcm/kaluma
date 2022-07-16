@@ -20,7 +20,7 @@
  */
 
 #include "board.h"
-#include "tty.h"
+#include "repl.h"
 #include "cyw43_arch.h"
 
 /**
@@ -32,6 +32,6 @@ void board_init() {}
  * Initialize board specific modules
  */
 void board_modules_init() {
-  km_tty_printf("board_modules_init");
+  km_repl_printf("board_modules_init");
   km_cyw43_arch_init();
 }
