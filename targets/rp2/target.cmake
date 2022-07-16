@@ -55,7 +55,7 @@ if(NOT MODULES)
     startup)
 endif()
 
-message(STATUS MODULES)
+message(STATUS ${MODULES})
 
 set(PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/lib/pico-sdk)
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
