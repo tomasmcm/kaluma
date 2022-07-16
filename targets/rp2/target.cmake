@@ -21,8 +21,6 @@ if(PICO_CYW43_SUPPORTED)
   set(EXTRA_MODULES cyw43_arch)
 endif()
 
-message(STATUS "setting modules")
-
 # default modules
 if(NOT MODULES)
   set(MODULES 
@@ -55,8 +53,6 @@ if(NOT MODULES)
     startup)
 endif()
 
-message(STATUS ${MODULES})
-
 set(PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/lib/pico-sdk)
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
@@ -73,16 +69,10 @@ if(PICO_CYW43_SUPPORTED)
   set(EXTRA_SOURCES ${TARGET_SRC_DIR}/cyw43_arch.c)
 endif()
 
-if(PICO_CYW43_SUPPORTED)
-  set(SYSTEM_SOURCE ${TARGET_SRC_DIR}/system_pico_w.c)
-else()
-  set(SYSTEM_SOURCE ${TARGET_SRC_DIR}/system.c)
-endif()
-
 set(SOURCES
   ${SOURCES}
   ${TARGET_SRC_DIR}/adc.c
-  ${SYSTEM_SOURCE}
+  ${TARGET_SRC_DIR}/system.c
   ${EXTRA_SOURCES}
   ${TARGET_SRC_DIR}/gpio.c
   ${TARGET_SRC_DIR}/pwm.c
