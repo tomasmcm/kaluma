@@ -21,6 +21,6 @@
 
 #include "cyw43_arch.h"
 
-void km_cyw43_arch_init() {}
+uint8_t km_cyw43_arch_init() {}
 
 void km_cyw43_arch_gpio_put(uint8_t pin, uint8_t value) {}
