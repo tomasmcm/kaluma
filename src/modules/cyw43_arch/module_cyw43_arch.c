@@ -34,8 +34,8 @@
  *   {number}
  */
 JERRYXX_FUN(cyw43_arch_init_fn) {
-  uint8_t init = km_cyw43_arch_init();
-  return jerry_create_number(init);
+  km_cyw43_arch_init();
+  return jerry_create_undefined();
 }
 
 /**

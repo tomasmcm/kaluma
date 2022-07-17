@@ -28,7 +28,7 @@
 #define KM_CYW43_ARCH_WL_GPIO_LED_PIN 0
 #define MSTR_CYW43_ARCH_WL_GPIO_LED_PIN "CYW43_ARCH_WL_GPIO_LED_PIN"
 
-uint8_t km_cyw43_arch_init();
+void km_cyw43_arch_init();
 
 void km_cyw43_arch_gpio_put(uint8_t pin, uint8_t value);
 
