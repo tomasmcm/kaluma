@@ -29,11 +29,11 @@
 #include "cyw43_arch_magic_strings.h"
 
 /**
- * cyw43_arch.init()
+ * cyw43_arch.init_module()
  * returns:
  *   {number}
  */
-JERRYXX_FUN(cyw43_arch_init_fn) {
+JERRYXX_FUN(cyw43_arch_init_module_fn) {
   km_cyw43_arch_init();
   return jerry_create_undefined();
 }
@@ -60,7 +60,7 @@ JERRYXX_FUN(cyw43_arch_gpio_put_fn) {
 jerry_value_t module_cyw43_arch_init() {
   /* cyw43_arch module exports */
   jerry_value_t exports = jerry_create_object();
-  jerryxx_set_property_function(exports, MSTR_CYW43_ARCH_INIT, cyw43_arch_init_fn);
+  jerryxx_set_property_function(exports, MSTR_CYW43_ARCH_INIT_MODULE, cyw43_arch_init_module_fn);
   jerryxx_set_property_function(exports, MSTR_CYW43_ARCH_GPIO_PUT, cyw43_arch_gpio_put_fn);
 
 

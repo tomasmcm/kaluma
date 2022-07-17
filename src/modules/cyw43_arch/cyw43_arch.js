@@ -2,8 +2,8 @@ const rp2_native = process.binding(process.binding.cyw43_arch);
 
 const CYW43_ARCH_WL_GPIO_LED_PIN = 0
 
-function init() {
-  return rp2_native.init();
+function initModule() {
+  return rp2_native.initModule();
 }
 
 function gpioPut(pin, value) {

@@ -23,7 +23,7 @@
 #define __CYW43_ARCH_MAGIC_STRINGS_H
 
 #define MSTR_CYW43_ARCH_CYW43_ARCH "cyw43_arch"
-#define MSTR_CYW43_ARCH_INIT "init"
+#define MSTR_CYW43_ARCH_INIT_MODULE "initModule"
 #define MSTR_CYW43_ARCH_GPIO_PUT "gpioPut"
 
 #endif /* __CYW43_ARCH_MAGIC_STRINGS_H */
