@@ -11,5 +11,5 @@ function gpioPut(pin, value) {
 }
 
 exports.CYW43_ARCH_WL_GPIO_LED_PIN = CYW43_ARCH_WL_GPIO_LED_PIN;
-exports.init = init;
+exports.initModule = initModule;
 exports.gpioPut = gpioPut;
