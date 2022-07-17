@@ -10,3 +10,7 @@ fs.register("lfs", VFSLittleFS);
 // fs block starts after 4(storage) + 128(program)
 const bd = new Flash(132, 128);
 fs.mount("/", bd, "lfs", true);
+
+const cyw43_arch = require('cyw43_arch');
+const init = cyw43_arch.initModule();
+console.log(init);
