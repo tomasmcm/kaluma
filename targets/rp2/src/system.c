@@ -92,6 +92,7 @@ void km_system_cleanup() {
   km_gpio_cleanup();
   km_rtc_cleanup();
   km_flash_cleanup();
+  extra_modules_cleanup();
 }
 
 uint8_t km_running_script_check() {

@@ -88,4 +88,6 @@ void board_init();
 
 void extra_modules_init();
 
+void extra_modules_cleanup();
+
 #endif /* __RP2_PICO_H */
