@@ -20,8 +20,13 @@
  */
 
 #include "board.h"
+#include "cyw43_arch.h"
 
 /**
  * Initialize board
  */
 void board_init() {}
+
+void extra_modules_init() {
+  km_cyw43_arch_init();
+}
