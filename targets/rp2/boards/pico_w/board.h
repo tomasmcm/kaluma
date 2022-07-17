@@ -89,7 +89,6 @@
 #define CYW43_PIN_WL_REG_ON 23
 #define CYW43_WL_GPIO_COUNT 3
 #define CYW43_WL_GPIO_LED_PIN 0
-#define PICO_CYW43_ARCH_POLL 0
 
 void board_init();
 
