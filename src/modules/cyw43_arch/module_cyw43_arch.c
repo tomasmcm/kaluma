@@ -29,6 +29,16 @@
 #include "cyw43_arch_magic_strings.h"
 
 /**
+ * cyw43_arch.init()
+ * returns:
+ *   {number}
+ */
+JERRYXX_FUN(cyw43_arch_init_fn) {
+  uint8_t init = km_cyw43_arch_init();
+  return jerry_create_number(init);
+}
+
+/**
  * cyw43_arch.gpioPut(t)
  * args:
  *   pin: {number}
@@ -48,11 +58,12 @@ JERRYXX_FUN(cyw43_arch_gpio_put_fn) {
  * Initialize 'cyw43_arch' module
  */
 jerry_value_t module_cyw43_arch_init() {
-  km_cyw43_arch_init();
-
   /* cyw43_arch module exports */
   jerry_value_t exports = jerry_create_object();
+  jerryxx_set_property_function(exports, MSTR_CYW43_ARCH_INIT, cyw43_arch_init_fn);
   jerryxx_set_property_function(exports, MSTR_CYW43_ARCH_GPIO_PUT, cyw43_arch_gpio_put_fn);
+
+
   jerry_value_t global = jerry_get_global_object();
   jerryxx_set_property_number(global, MSTR_CYW43_ARCH_WL_GPIO_LED_PIN, KM_CYW43_ARCH_WL_GPIO_LED_PIN);
   return exports;

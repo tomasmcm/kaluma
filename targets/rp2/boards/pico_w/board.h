@@ -23,7 +23,6 @@
 #define __RP2_PICO_W_H
 
 #include "jerryscript.h"
-#include "cyw43_arch.h"
 
 // system
 #define KALUMA_SYSTEM_ARCH "cortex-m0-plus"
