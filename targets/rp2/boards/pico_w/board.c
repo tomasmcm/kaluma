@@ -27,6 +27,9 @@
  */
 void board_init() {}
 
+/**
+ * Initialize board specific modules
+ */
 void extra_modules_init() {
   km_cyw43_arch_init();
 }
